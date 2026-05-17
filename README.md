@@ -29,16 +29,17 @@ WebSocket - Socket.IO
 2. Запустить **Apache** и **MySQL**
 3. Перейдите в phpMyAdmin: `http://localhost/phpmyadmin`
 4. Создайте базу данных с именем `quiz`
-5. Импортируйте файл `database/quiz.sql`
+5. Импортируйте файл `database/quiz(1).sql`
 
 ### Запуск сервера (backend)
 ```bash
 cd backend
 npm install
 npm run dev
-
+```
 ### Запуск клиента (frontend)
 ```bash
 cd frontend
 npm install
 npm start
+```
