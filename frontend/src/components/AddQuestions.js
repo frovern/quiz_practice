@@ -136,7 +136,6 @@ function AddQuestions({ quizId, quizTitle, onFinish }) {
           image_url: '',
           points: 10
         });
-        alert('Вопрос сохранён!');
       } else {
         alert('Ошибка сохранения');
       }
@@ -219,14 +218,14 @@ function AddQuestions({ quizId, quizTitle, onFinish }) {
               className={currentQuestion.answer_type === 'single' ? 'active' : ''}
               onClick={() => setCurrentQuestion({ ...currentQuestion, answer_type: 'single', correct_options: [] })}
             >
-              ○ Одиночный выбор
+              Одиночный выбор
             </button>
             <button
               type="button"
               className={currentQuestion.answer_type === 'multiple' ? 'active' : ''}
               onClick={() => setCurrentQuestion({ ...currentQuestion, answer_type: 'multiple', correct_options: [] })}
             >
-              ☑ Множественный выбор
+              Множественный выбор
             </button>
           </div>
         </div>
@@ -259,7 +258,7 @@ function AddQuestions({ quizId, quizTitle, onFinish }) {
                 className={`correct-btn ${currentQuestion.correct_options.includes(idx) ? 'active' : ''}`}
                 onClick={() => toggleCorrectOption(idx)}
               >
-                {currentQuestion.correct_options.includes(idx) ? '✓ Правильный' : 'Правильный'}
+                Правильный
               </button>
               <button type="button" className="remove-btn" onClick={() => removeOption(idx)}>✗</button>
             </div>
@@ -272,7 +271,7 @@ function AddQuestions({ quizId, quizTitle, onFinish }) {
         </button>
 
         <button className="btn-finish" onClick={onFinish}>
-          Готово → к списку квизов
+          Готово
         </button>
       </div>
     </div>

@@ -31,7 +31,6 @@ function OrganizerView({ userId, onCreate }) {
       });
       const data = await res.json();
       if (data.success) {
-        alert('Квиз удалён');
         fetchMyQuizzes();
       } else {
         alert('Ошибка удаления');
@@ -88,13 +87,13 @@ function OrganizerView({ userId, onCreate }) {
                   className="btn-run"
                   onClick={() => setActiveHost({ quizId: quiz.id, roomCode: quiz.room_code })}
                 >
-                  ▶ Запустить
+                  Запустить
                 </button>
                 <button 
                   className="btn-delete" 
                   onClick={() => handleDeleteQuiz(quiz.id, quiz.title)}
                 >
-                  🗑 Удалить
+                  Удалить
                 </button>
               </div>
             </div>

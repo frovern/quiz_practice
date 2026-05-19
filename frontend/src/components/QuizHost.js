@@ -106,7 +106,7 @@ function QuizHost({ quizId, roomCode, userId, onFinish, onCancel }) {
             ))
           )}
         </div>
-        <button className="btn-finish" onClick={onFinish}>Закрыть</button>
+        <button className="btn-finish" onClick={onFinish}>На главную</button>
       </div>
     );
   }
@@ -134,7 +134,6 @@ function QuizHost({ quizId, roomCode, userId, onFinish, onCancel }) {
     <div className="quiz-host-active">
       <h2>
         Вопрос {currentQuestionIndex + 1} из {questions.length}
-        {isWaitingForNext && <span className="next-waiting"> ⏳</span>}
       </h2>
       
       <div className="players-list">

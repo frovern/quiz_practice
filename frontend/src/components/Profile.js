@@ -58,9 +58,6 @@ function Profile({ user, onBack }) {
             <span className="profile-value">{user.role === 'organizer' ? 'Организатор' : 'Участник'}</span>
           </div>
         </div>
-
-        <hr />
-
         <h3>{user.role === 'participant' ? 'История участия' : 'Проведённые квизы'}</h3>
         
         {history.length === 0 ? (
