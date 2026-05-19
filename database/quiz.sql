@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 17 2026 г., 17:19
+-- Время создания: Май 19 2026 г., 13:35
 -- Версия сервера: 10.4.32-MariaDB
 -- Версия PHP: 8.0.30
 
@@ -74,7 +74,7 @@ CREATE TABLE `quizzes` (
 
 INSERT INTO `quizzes` (`id`, `title`, `category`, `time_per_question`, `created_by`, `room_code`, `status`, `created_at`) VALUES
 (4, 'Таблица умножения', 'Математика', 10, 2, '11NQO4', 'waiting', '2026-05-17 10:05:37'),
-(5, 'Linux', 'IT', 15, 2, 'E4RFAB', 'finished', '2026-05-17 12:07:09');
+(5, 'Linux', 'IT', 15, 2, 'E4RFAB', 'waiting', '2026-05-17 12:07:09');
 
 -- --------------------------------------------------------
 
@@ -99,13 +99,9 @@ CREATE TABLE `results` (
 --
 
 INSERT INTO `results` (`id`, `quiz_id`, `quiz_title`, `user_id`, `user_name`, `score`, `max_score`, `rank_position`, `played_at`) VALUES
-(1, 4, 'Квиз', 3, 'Вика Смешнявка', 11, 11, 1, '2026-05-17 11:28:33'),
 (2, 5, 'Квиз', 4, 'Дракон', 20, 35, 1, '2026-05-17 12:12:57'),
 (3, 5, 'Квиз', 4, 'Дракон', 20, 35, 1, '2026-05-17 14:27:43'),
-(4, 5, 'Квиз', 4, 'Дракон', 35, 35, 1, '2026-05-17 15:02:55'),
-(5, 5, 'Квиз', 3, 'Вика Смешнявка', 10, 35, 2, '2026-05-17 15:02:55'),
-(6, 5, 'Квиз', 3, 'Вика Смешнявка', 0, 35, 1, '2026-05-17 15:08:56'),
-(7, 5, 'Квиз', 3, 'Вика Смешнявка', 5, 35, 1, '2026-05-17 15:10:15');
+(4, 5, 'Квиз', 4, 'Дракон', 35, 35, 1, '2026-05-17 15:02:55');
 
 -- --------------------------------------------------------
 
@@ -145,7 +141,6 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `created_at`) VALUES
 (1, 'Алексей', 'alex@quiz.ru', '202cb962ac59075b964b07152d234b70', 'organizer', '2026-05-15 15:25:33'),
 (2, 'виктор', 'org@gmail.com', '202cb962ac59075b964b07152d234b70', 'organizer', '2026-05-15 16:38:12'),
-(3, 'Вика', 'vikavka@gmail.c0m', '0656653df9ba1e90f6803b01ce3d5ca2', 'participant', '2026-05-15 16:57:37'),
 (4, 'Дракон', 'dragon@mail.ru', 'c5fe25896e49ddfe996db7508cf00534', 'participant', '2026-05-17 10:08:19');
 
 --
@@ -197,19 +192,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблицы `quizzes`
 --
 ALTER TABLE `quizzes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `results`
 --
 ALTER TABLE `results`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `sessions`
